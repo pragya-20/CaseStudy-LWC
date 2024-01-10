@@ -1,0 +1,17 @@
+.leftsec {
+  background-color: burlywood;
+  height: 60vh;
+  border: 2px ridge rgb(96, 96, 241);
+  box-shadow: 2px 2px red;
+  font-family: fantasy;
+  font-weight: bolder;
+  color: black;
+}
+.rightsec {
+  background-color: blanchedalmond;
+  height: 60vh;
+  border: 2px ridge red;
+  box-shadow: 2px 2px grey;
+  font-family: fantasy;
+  color: black;
+}
