@@ -5,9 +5,9 @@ import { subscribe, MessageContext } from "lightning/messageService";
 
 export default class TourismRightBody extends LightningElement {
   @wire(MessageContext) mcon;
-  dataFromSideBar = "";
+  dataFromSideBar = "home";
 
-  // 3params: 1. name of the context 2. Channel name from where to subscribe 3.data processing
+  // subscribe takes 3params: 1. name of the context 2. Channel name from where to subscribe 3.data processing
   connectedCallback() {
     if (this.mcon != null) {
       subscribe(this.mcon, amChannel, (cdata) => {
@@ -18,5 +18,14 @@ export default class TourismRightBody extends LightningElement {
 
   capData(cdata) {
     this.dataFromSideBar = cdata.menuval;
+  }
+
+  //This has been implemented to show home page by default and only when the home menu is selected
+  get homePage() {
+    return this.dataFromSideBar === "home";
+  }
+
+  get touristPlaces() {
+    return this.dataFromSideBar === "places";
   }
 }

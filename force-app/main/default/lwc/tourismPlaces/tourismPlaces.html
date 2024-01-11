@@ -1,10 +1,11 @@
 <template>
   <lightning-layout class="slds-wrap">
     <template for:each={tourismPlacesList} for:item="tp">
-      <lightning-layout-item size="4" key={tp.id}>
+      <lightning-layout-item size="4" key={tp.Id}>
         <lightning-card title="Tourist Place" style="color: black">
           <div style="margin: 20px; background-color: beige; padding: 10px">
-            <strong style="color: darkblue">Place Name: </strong>{tp.Name}<br />
+            <strong style="color: darkblue">Place Name: </strong
+            ><a data-sfid={tp.Id} onclick={sendId}>{tp.Name}</a><br />
             <strong style="color: darkblue">Trip Cost per person: </strong
             >{tp.Cost__c}<br />
           </div>

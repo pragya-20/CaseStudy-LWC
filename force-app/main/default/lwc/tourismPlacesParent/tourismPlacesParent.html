@@ -1,0 +1,11 @@
+<template>
+  <div style="background-color: aquamarine; height: 74vh; padding: 20px">
+    <c-tourism-places ontrevent={handleTrEvent}></c-tourism-places>
+    <br />
+    <template lwc:if={trecFound}>
+      <span style="color: cadetblue; font-size: 14">
+        {trec.Description__c}
+      </span>
+    </template>
+  </div>
+</template>

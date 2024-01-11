@@ -1,6 +1,12 @@
 <template>
   <div style="padding: 20px; height: 79.5vh; background-color: cyan">
-    <c-tourism-home-logo></c-tourism-home-logo>
-    <strong style="color: black">{dataFromSideBar}</strong>
+    <!--This has been implemented to show home page by default and only when the home menu is selected -->
+    <template lwc:if={homePage}>
+      <c-tourism-home-logo></c-tourism-home-logo>
+    </template>
+    <template lwc:elseif={touristPlaces}>
+      <c-tourism-places-parent></c-tourism-places-parent>
+    </template>
+    <template lwc:else> {dataFromSideBar} </template>
   </div>
 </template>

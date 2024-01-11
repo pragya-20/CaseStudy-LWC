@@ -1,6 +1,10 @@
 <template>
   <div style="padding: 10px">
-    <lightning-vertical-navigation-section label="Options" name="Menu Options">
+    <lightning-vertical-navigation-section
+      label="Options"
+      name="Menu Options"
+      selected-item="recent"
+    >
       <lightning-vertical-navigation-item
         label="Home"
         name="home"
@@ -17,8 +21,8 @@
         onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item
-        label="Feedback"
-        name="feedback"
+        label="Report"
+        name="report"
         onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item

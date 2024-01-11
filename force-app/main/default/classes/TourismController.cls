@@ -12,4 +12,14 @@ public class TourismController {
             return null;
         }
     }
+
+    @AuraEnabled
+    public static Tourism__c showData(String tId){
+        try {
+            Tourism__c tr = [select Description__c from tourism__c where Id = :tId];
+            return tr;
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
 }
