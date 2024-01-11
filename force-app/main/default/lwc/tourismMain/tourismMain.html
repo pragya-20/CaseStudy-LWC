@@ -1,14 +1,14 @@
 <template>
-    <lightning-layout>
-        <lightning-layout-item size="2">
-            <div class="leftsec">
-
-            </div>
-        </lightning-layout-item>
-        <lightning-layout-item size="10">
-            <div class="rightsec">
-
-            </div>
-        </lightning-layout-item>
-    </lightning-layout>
+  <lightning-layout class="slds-wrap">
+    <lightning-layout-item size="2">
+      <div class="leftsec">
+        <c-tourism-side-bar></c-tourism-side-bar>
+      </div>
+    </lightning-layout-item>
+    <lightning-layout-item size="10">
+      <div class="rightsec">
+        <c-tourism-right-body></c-tourism-right-body>
+      </div>
+    </lightning-layout-item>
+  </lightning-layout>
 </template>
