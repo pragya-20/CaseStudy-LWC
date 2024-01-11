@@ -1,26 +1,31 @@
 <template>
-  <div style="padding: 20px">
-    <lightning-vertical-navigation label="Options" name="Menu Options">
+  <div style="padding: 10px">
+    <lightning-vertical-navigation-section label="Options" name="Menu Options">
       <lightning-vertical-navigation-item
         label="Home"
         name="home"
+        onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item
         label="Places"
         name="places"
+        onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item
         label="Booking"
         name="booking"
+        onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item
         label="Feedback"
         name="feedback"
+        onclick={sendName}
       ></lightning-vertical-navigation-item>
       <lightning-vertical-navigation-item
         label="Contact Us"
         name="contact"
+        onclick={sendName}
       ></lightning-vertical-navigation-item>
-    </lightning-vertical-navigation>
+    </lightning-vertical-navigation-section>
   </div>
 </template>
