@@ -20,6 +20,13 @@ export default class TourismRightBody extends LightningElement {
     this.dataFromSideBar = cdata.menuval;
   }
 
+  // cancelContact(event) {
+  //   let msg = event.detail.cancelmsg;
+  //   if (msg === "cancel") {
+  //     this.dataFromSideBar = "home";
+  //   }
+  // }
+
   //This has been implemented to show home page by default and only when the home menu is selected
   get homePage() {
     return this.dataFromSideBar === "home";
@@ -27,5 +34,13 @@ export default class TourismRightBody extends LightningElement {
 
   get touristPlaces() {
     return this.dataFromSideBar === "places";
+  }
+
+  get bookingPage() {
+    return this.dataFromSideBar === "booking";
+  }
+
+  get reportPage() {
+    return this.dataFromSideBar === "report";
   }
 }

@@ -7,6 +7,14 @@
     <template lwc:elseif={touristPlaces}>
       <c-tourism-places-parent></c-tourism-places-parent>
     </template>
-    <template lwc:else> {dataFromSideBar} </template>
+    <template lwc:elseif={bookingPage}>
+      <c-booking-form oncancelpage={cancelbooking}></c-booking-form>
+    </template>
+    <template lwc:elseif={reportPage}>
+      <c-booking-report></c-booking-report>
+    </template>
+    <template lwc:else>
+      <c-contact-us></c-contact-us>
+    </template>
   </div>
 </template>

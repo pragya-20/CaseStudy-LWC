@@ -1,0 +1,80 @@
+<template>
+  <lightning-card title="Tourism Booking">
+    <div
+      style="
+        padding: 20px;
+        background-color: white;
+        overflow-y: scroll;
+        color: black;
+      "
+      class="slds-form_horizontal"
+    >
+      <lightning-input
+        label="Customer Name"
+        required="true"
+        message-when-value-missing="Please provide customer name"
+        onchange={validateform}
+        class="customer-name"
+      ></lightning-input>
+      <lightning-input
+        label="Customer Email"
+        type="email"
+        required="true"
+        onchange={validateform}
+        class="customer-email"
+      ></lightning-input>
+      <lightning-input
+        label="Destination"
+        required="true"
+        type="text"
+        onchange={validateform}
+        class="destination"
+      ></lightning-input>
+      <lightning-input
+        label="Number of Days"
+        type="number"
+        required="true"
+        min="1"
+        max="10"
+        message-when-range-underflow="You need to enter atleast 1 day!"
+        message-when-range-overflow="You cannot add more than 10 days!"
+        onchange={validateform}
+        class="no-of-days"
+      ></lightning-input>
+      <lightning-input
+        label="Starting Date"
+        type="date"
+        required="true"
+        onchange={validateform}
+        class="start-date"
+      ></lightning-input>
+      <lightning-input
+        label="Number of Persons"
+        type="number"
+        required="true"
+        onchange={validateform}
+        class="no-of-persons"
+      ></lightning-input>
+      <br />
+      <div style="padding: 10px; text-align: center">
+        <lightning-button
+          label="Submit Booking"
+          disabled="true"
+          variant="brand"
+          class="enable-submit"
+          onclick={handleSubmit}
+          style="margin-left: 10px; margin-right: 10px"
+        ></lightning-button>
+        <lightning-button
+          label="Cancel Booking"
+          class="cancel-booking"
+          onclick={handleCancel}
+          style="margin-left: 10px; margin-right: 10px"
+        ></lightning-button>
+      </div>
+    </div>
+    <div slot="footer" style="color: black">
+      <p>{bookingMsg}</p>
+    </div>
+  </lightning-card>
+</template>

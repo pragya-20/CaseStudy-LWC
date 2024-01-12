@@ -1,0 +1,36 @@
+<template>
+  <template lwc:if={boxstatus}>
+    <div class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <div style="text-align: right; color: black">
+          <lightning-button-icon
+            icon-name="utility:close"
+            alternative-text="Close"
+            tooltip="Close contact us page"
+            variant="brand"
+            onclick={closeContact}
+          >
+          </lightning-button-icon>
+        </div>
+        <div class="slds-modal__header" style="color: black">
+          <strong>Contact Us</strong>
+        </div>
+        <div
+          class="slds-modal__content"
+          style="padding: 20px; color: black; font-size: large"
+        >
+          Supervisor:<span></span> Ashok Kumar<br />
+          Field Officer: Hemendra Sign <br />
+          Mail us here: ask@tourismindia.com <br />
+        </div>
+        <div
+          class="slds-modal__footer"
+          style="text-align: center; color: black"
+        >
+          Copyright reserved - 2024-25
+        </div>
+      </div>
+      <div class="slds-backdrop slds-backdrop__open"></div>
+    </div>
+  </template>
+</template>

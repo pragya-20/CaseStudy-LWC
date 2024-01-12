@@ -1,0 +1,14 @@
+<template>
+  <lightning-card>
+    <div style="padding: 10px">
+      <lightning-datatable
+        data={bookingList}
+        columns={tabcols}
+        key-field="id"
+        hide-checkbox-column="true"
+        show-row-number-column="true"
+        style="color: black"
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>
