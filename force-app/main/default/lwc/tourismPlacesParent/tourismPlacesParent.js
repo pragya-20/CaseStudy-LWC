@@ -6,7 +6,7 @@ export default class TourismPlacesParent extends LightningElement {
   trec = null;
 
   handleTrEvent(event) {
-    this.child = event.detail.tourismId;
+    this.childId = event.detail.tourismId;
     console.log("In Tourism Places Parent: ", this.child);
 
     showData({ tId: this.childId })
